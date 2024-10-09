@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 84%;
+  height: 50%;
+  border: 1px solid black;
+  display: flex;
+  max-width: 681px;
+}
+
+.pic {
+  flex: 0.6;
+  display: flex;
+}
+
+.pic img {
+  width: 100%; /* Adjust to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container */
+}
+
+.text {
+  flex: 0.9;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  margin-top: 20px;
+  margin-left: 27.5px;
+  margin-right: 27.5px;
+  margin-bottom: 20px;
+}
+
+.text h2 {
+  font-size: 1.8rem; /* Increase font size */
+  margin: 10px 0; /* Maintain space above and below */
+  flex-grow: 0.8;
+  flex-grow: 1;
+}
+
+.text p {
+  font-size: 1rem; /* Increase font size for paragraph */
+  margin-bottom: 5px; /* Space below paragraph */
+  flex-grow: 1;
+}
+
+.profile {
+  width: 100%; /* Use full width */
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between profile info and share icon */
+  margin-top: auto; /* Push it to the bottom of the text area */
+  flex-grow: 1;
+  position: relative;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center; /* Center align the profile image and text */
+}
+
+.profile-img {
+  width: auto; /* Allow image width to adjust */
+}
+
+.profile-img img {
+  object-fit: contain; /* Maintain aspect ratio */
+  max-width: 50px; /* Limit image size */
+  height: auto; /* Auto height for aspect ratio */
+}
+
+.share-icon {
+  margin-left: 10px; /* Space between text and share icon */
+}
+.socialIcons {
+  border: 1px solid black;
+  width: 40%;
+  display: flex;
+  background-color: rgb(125, 119, 119);
+  padding: 8px;
+  justify-content: space-between;
+  color: gainsboro;
+  border-radius: 15px;
+  border: 0;
+  position: absolute;
+  top: 00%;
+  right: 20px;
+}
+.socialIcons p {
+  font-size: 1.2rem;
+}
+
+.socialIcons img {
+  margin-right: 5px;
+}
+
+.socialIcons img:nth-child(2):hover {
+  transform: scale(1.2);
+}
+
+.socialIcons img:nth-child(3):hover {
+  transform: scale(1.2);
+}
+
+.socialIcons img:nth-child(4):hover {
+  transform: scale(1.2);
+}
+
+#share:hover {
+  transform: scale(1.1);
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 804px) {
+  .container {
+    flex-direction: column;
+    width: 50%;
+    height: auto; /* Adjust height to content */
+    justify-content: center;
+    align-items: center;
+    min-width: 558px;
+  }
+
+  .text {
+    display: flex;
+    flex: 0.5;
+    height: auto; /* Allow content to grow */
+  }
+  .text h2 {
+    font-size: 1.3rem;
+  }
+  .text p {
+    font-size: 0.8rem;
+  }
+  .pic {
+    display: flex;
+    flex: 0.5;
+  }
+
+  .pic img {
+    width: 100%; /* Ensure the image fits the container */
+    height: auto;
+    object-fit: contain;
+  }
+}
